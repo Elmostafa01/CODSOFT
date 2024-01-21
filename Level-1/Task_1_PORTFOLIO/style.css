@@ -7,9 +7,11 @@
 :root {
     --poppins: 'Poppins', sans-serif;
     --righteous: 'Righteous', sans-serif;
+    --days: 'Days One', sans-serif;
+    --sun: #ffffff;
     --violet-c: #4106ff;
     --violet-100: #ddd2ff;
-    --violet-200:#b69fff;
+    --violet-200:hsl(254, 100%, 81%);
     --violet-300: #8f6cff;
     --violet-900: #1a006c;
     --white-100: #ffffff;
@@ -22,24 +24,40 @@
 
 body {
     background: var(--white-200);
+    overflow-x: hidden;
+}
+
+.header-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 4rem;
+    overflow: hidden;
 }
 
 nav {
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
     gap: 2rem;
-    padding: 2rem 1rem;
+    height: 10vh;
     margin: auto;
-    max-width: 1400px;
-    border-radius: 80px;
+    z-index: 99;
+    animation: slide-in 3.5s ease-in-out forwards;
+    transform: translateY(-6rem);
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);*/
     /*margin-top: 5px;*/
-    /*background: var(--white-100);*/
+    background: var(--white-100);
 }
 
 .logo {
-    max-width: 120px;
-    min-width: 80px;
+    max-width: 50px;
+    min-width: 40px;
 }
 .logo > a > img {
     width: 100%;
@@ -84,11 +102,12 @@ nav {
     padding: 10px 20px;
     border: 0;
     background: var(--violet-c);
+    outline: 3px solid var(--violet-100);
     color: var(--white-100);
     font-family: var(--poppins);
     border-radius: 6px;
     cursor: pointer;
-    transition: .3s all ease;
+    transition: .8s all ease;
 }
 
 .btn:hover {
@@ -98,4 +117,132 @@ nav {
 .btn:active {
     background: var(--violet-900);
     transform: scale(0.94);
+    transition: .3s all;
 }
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.hero {
+    margin-top: 5rem;
+    max-width: 800px;
+    width: 100%;
+    height: 700px;
+}
+.hero-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(6);
+    opacity: 0;
+    animation: scale 3s ease-in-out forwards;
+}
+
+.phrase {
+    font-family: var(--days);
+    overflow: hidden;
+}
+
+.sentence__one {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+}
+
+.sentence__one > .t-one {
+    transition: .5s all;
+    overflow: visible;
+    font-size: clamp(3rem, 7.5vw, 10rem); 
+    white-space: nowrap;
+    color: var(--darker);
+    animation: slide 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
+    transform: translateY(100%);
+}
+
+.sentence__two {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.sentence__two > .t-two {
+    transition: .5s all;
+    overflow: visible;
+    font-size: clamp(2.4rem, 7.5vw, 10rem); 
+    white-space: nowrap;
+    color: var(--violet-c);
+    animation: slide 3.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
+    transform: translateY(130%);
+}
+
+.sentence__three {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    overflow: hidden;
+}
+
+.sentence__three > .t-three {
+    transition: .5s all;
+    overflow: visible;
+    font-size: clamp(3rem, 7.5vw, 10rem); 
+    white-space: nowrap;
+    color: var(--darker);
+    animation: slide 3.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
+    transform: translateY(150%);
+}
+
+
+
+
+/*********Sections**********/
+section:nth-of-type(1) {
+    background: pink;
+}
+section:nth-of-type(2) {
+    background: orange;
+}
+section:nth-of-type(3) {
+    background: red;
+}
+/**************************/
+
+/*Animations*/
+@keyframes scale {
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateY(0);
+    }
+
+}
+@keyframes slide {
+    to {
+     transform: translateY(0%);
+    }
+  }
+
