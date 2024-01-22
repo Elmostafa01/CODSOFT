@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .header-section {
     width: 100vw;
     height: 100vh;
@@ -40,6 +41,7 @@ body {
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -53,6 +55,75 @@ nav {
     /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);*/
     /*margin-top: 5px;*/
     background: var(--white-100);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: var(--white-100);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scaleY(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    transform: scaleY(1);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    content: '';
+    background-color: var(--violet-200);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle-label span::before {
+    top: 0.8rem;
+    right: 0;
+    left: auto;
+}
+
+.nav-toggle-label span::after {
+    top: 1.6rem;
+    right: 0;
+    left: auto;
+}
+
+.nav-toggle:checked + .nav-links {
+    transform: scaleY(1);
+}
+.nav-toggle:checked + .nav-links .link {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .logo {
@@ -125,7 +196,7 @@ section {
     height: 100vh;
 }
 
-
+/************Hero-Section************/
 .hero {
     margin-top: 5rem;
     max-width: 800px;
@@ -149,6 +220,7 @@ section {
 .phrase {
     font-family: var(--days);
     overflow: hidden;
+    pointer-events: none;
 }
 
 .sentence__one {
@@ -168,6 +240,8 @@ section {
     color: var(--darker);
     animation: slide 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
     transform: translateY(100%);
+    -webkit-text-stroke: 0.05rem var(--darker);
+    color: transparent;
 }
 
 .sentence__two {
@@ -206,9 +280,12 @@ section {
     font-size: clamp(3rem, 7.5vw, 10rem); 
     white-space: nowrap;
     color: var(--darker);
-    animation: slide 3.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
+    animation: slide 4.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards ;
     transform: translateY(150%);
+    -webkit-text-stroke: 0.05rem var(--darker);
+    color: transparent;
 }
+/*******************/
 
 
 
@@ -222,6 +299,9 @@ section:nth-of-type(2) {
 }
 section:nth-of-type(3) {
     background: red;
+}
+section:nth-of-type(4) {
+    background: cyan;
 }
 /**************************/
 
