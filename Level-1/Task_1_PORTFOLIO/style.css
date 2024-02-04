@@ -489,7 +489,7 @@ nav {
 .skills-section {
     background: var(--white-400);
     width: 100vw;
-    min-height: 120vh;
+    min-height: 100vh;
     /*display: flex;
     align-items: center;
     justify-content: center;*/
@@ -526,7 +526,30 @@ nav {
     font-size: clamp(1rem ,1.5rem, 3vw);
 }
 
+.card-container {
+    margin-top: 5rem;
+    max-width: 1000px;
+    display: grid;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+    animation: card-reveal linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    opacity: 0;
+    transform: translateY(100%);
+  }
 
+.card-container .card {
+    flex-basis: 25%; /* Adjust as needed */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    
+}
 
 
 /*********Projects-SECTION**********/
@@ -539,6 +562,12 @@ nav {
 }
 
 /*Animations*/
+@keyframes card-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @keyframes scroll-watching {
     to {
         scale: 1 1;
@@ -603,6 +632,17 @@ nav {
 }
 
 /************MEDIA-QUERIES**************/
+@media (max-width: 768px) {
+    .card {
+      flex-basis: 40%; /* Two cards per row */
+    }
+  }
+  
+@media (max-width: 480px) {
+    .card {
+      flex-basis: 100%; /* One card per row */
+    }
+  }
 
 @media  (max-width: 500px) {
     .logo-wrapper > .ramdi,.elmostafa {
