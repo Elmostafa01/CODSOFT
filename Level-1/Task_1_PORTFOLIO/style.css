@@ -20,7 +20,7 @@
     --white-400: #f0f0f03b;
     --white-500: #e0e0e0;
     --darker: #000;
-    --gray: lightgray
+    --gray: hsl(0 0% 60% / 0.2);
 }
 ::-webkit-scrollbar {
     background-color: var(--white-100);
@@ -495,7 +495,7 @@ nav {
     justify-content: center;*/
     padding: 1rem 4rem;
     position: relative;
-    border: 3px solid red;
+    /*border: 3px solid red;*/
 }
 
 .skills-wrapper {
@@ -503,8 +503,19 @@ nav {
     max-width: 1000px;
 }
 
-.skills__header {
+.skills__header  {
     margin-top: 6rem;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, black, black);
+    color: var(--gray);
+    animation: scroll-reveal ease-in-out forwards;
+    animation-timeline: view();
+    animation-range-start: cover 40vh;
+    animation-range-end: cover 80vh;
+    opacity: 0;
+    transform: translateY(50%);
 }
 
 .skills__header p {
@@ -513,7 +524,6 @@ nav {
     font-family: var(--poppins);
     font-weight: 600;
     font-size: clamp(1rem ,1.5rem, 3vw);
-    color: var(--gray);
 }
 
 
@@ -584,6 +594,14 @@ nav {
         transform: translateY(0);
     }
 }
+@keyframes scroll-reveal {
+    to {
+        background-size: 100% 100%;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /************MEDIA-QUERIES**************/
 
 @media  (max-width: 500px) {
