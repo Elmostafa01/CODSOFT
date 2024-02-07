@@ -232,9 +232,25 @@ nav {
     outline: 3px solid var(--violet-100);
     color: var(--white-100);
     font-family: var(--poppins);
-    border-radius: 6px;
+    border-radius: 20px;
     cursor: pointer;
     transition: .8s all ease;
+}
+
+.btn:hover a {
+    color: var(--white-100);
+}
+
+.btn a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+}
+
+.btn svg {
+    height: 15px;
+    width: 15px;
 }
 
 .btn:hover {
