@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/assets/hero.svg" type="image/x-icon">
     <title>Redux</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="home">
         <video autoplay loop muted plays-inline class="bg-clip">
             <source src="/assets/bg-video.mp4" type="video/mp4">
         </video>
         <nav class="nav">
             <div class="logo-container">
-                <a href="#">
+                <a href="#home">
                     <div class="logo-redux">
                         <svg class="gradient-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                             <defs>
@@ -33,20 +34,37 @@
                 </a>
             </div>
             <div class="searchbar">
-                <img src="/assets/search.svg" alt="search">
+                <img class="search-icon" src="/assets/search.svg" alt="search">
                 <input class="input" type="text" placeholder="Search"/>
                 <span class="ctrl">ctrl + k</span>
             </div>
             <div class="right-nav">
-                <a href="#">
+                <a href="https://github.com/reduxjs/redux">
                     <span class="span">Github</span>
                     <img class="link" src="/assets/link.svg" alt="">
                 </a>
                 <button class="btn">
-                    <a href="#">Get Started</a>
+                    <a href="https://redux.js.org/introduction/getting-started">Get Started</a>
                 </button>
             </div>
         </nav>
+        <div class="mobile-right-nav">
+            <div class="dots">
+                <button class="btn-dot">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu-hover">
+                    <a href="#">
+                        <span class="span">Github</span>
+                    </a>
+                    <button class="get-started">
+                        <a href="#">Get Started</a>
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="content">
             <div class="hero">
                 <svg class="hero" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -91,5 +109,68 @@
             </div>
         </div>
     </div>
+    <section class="features">
+        <div class="features-content">
+            <div class="row">
+                <div class="col">
+                    <div class="head">
+                        <svg class="card-svg" fill="#5200FF" height="100px" width="100px" version="1.1" id="XMLID_215_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 24 24" xml:space="preserve">
+                            <g id="validation">
+                                <g>
+                                    <path d="M12,24c-1.2,0-2.1-1-2.8-1.8c-0.4-0.4-0.8-0.9-1-1c-0.3-0.1-1-0.1-1.5-0.1c-1.1,0.1-2.3,0.1-3.1-0.7s-0.8-2.1-0.7-3.1
+                                        c0-0.6,0.1-1.2-0.1-1.5c-0.1-0.3-0.6-0.7-1-1C1,14.1,0,13.2,0,12s1-2.1,1.8-2.8c0.4-0.4,0.9-0.8,1-1c0.1-0.3,0.1-1,0.1-1.5
+                                        C2.8,5.6,2.8,4.4,3.6,3.6c0.8-0.8,2.1-0.8,3.1-0.7c0.6,0,1.2,0.1,1.5-0.1c0.3-0.1,0.7-0.6,1-1C9.9,1,10.8,0,12,0s2.1,1,2.8,1.8
+                                        c0.4,0.4,0.8,0.9,1,1c0.3,0.1,1,0.1,1.5,0.1c1.1-0.1,2.3-0.1,3.1,0.7c0.8,0.8,0.8,2.1,0.7,3.1c0,0.6-0.1,1.2,0.1,1.5
+                                        c0.1,0.3,0.6,0.7,1,1C23,9.9,24,10.8,24,12s-1,2.1-1.8,2.8c-0.4,0.4-0.9,0.8-1,1c-0.1,0.3-0.1,1-0.1,1.5c0.1,1.1,0.1,2.3-0.7,3.1
+                                        c-0.8,0.8-2.1,0.8-3.1,0.7c-0.6,0-1.2-0.1-1.5,0.1c-0.3,0.1-0.7,0.6-1,1C14.1,23,13.2,24,12,24z M7.5,19.1c0.5,0,1,0.1,1.5,0.2
+                                        c0.7,0.3,1.3,0.9,1.8,1.5c0.4,0.5,1,1.1,1.3,1.1s0.9-0.6,1.3-1.1c0.5-0.6,1.1-1.2,1.8-1.5c0.7-0.3,1.6-0.3,2.4-0.2
+                                        c0.6,0,1.4,0.1,1.6-0.1s0.1-1,0.1-1.6c-0.1-0.8-0.1-1.7,0.2-2.4c0.3-0.7,0.9-1.3,1.5-1.8c0.4-0.3,1-0.9,1-1.2s-0.6-0.9-1.1-1.3
+                                        c-0.6-0.5-1.2-1.1-1.5-1.8c-0.3-0.7-0.3-1.6-0.2-2.4c0-0.6,0.1-1.4-0.1-1.6c-0.2-0.2-1-0.1-1.6-0.1c-0.8,0.1-1.7,0.1-2.4-0.2
+                                        c-0.7-0.3-1.3-0.9-1.8-1.5C12.9,2.6,12.3,2,12,2s-0.9,0.6-1.3,1.1c-0.5,0.6-1.1,1.2-1.8,1.5S7.3,4.9,6.5,4.8
+                                        c-0.6,0-1.4-0.1-1.6,0.1c-0.2,0.2-0.1,1-0.1,1.6c0.1,0.8,0.1,1.7-0.2,2.4c-0.3,0.7-0.9,1.3-1.5,1.8C2.6,11.1,2,11.7,2,12
+                                        s0.6,0.9,1.1,1.3c0.6,0.5,1.2,1.1,1.5,1.8s0.3,1.6,0.2,2.4c0,0.6-0.1,1.4,0.1,1.6c0.2,0.2,1,0.1,1.6,0.1
+                                        C6.8,19.2,7.1,19.1,7.5,19.1z M11,16.4l-3.7-3.7l1.4-1.4l2.3,2.3l5.3-5.3l1.4,1.4L11,16.4z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="head__label">Predictable</h2>
+                    <div class="text">
+                        <p>Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="head">
+                        <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"></path></svg>
+                    </div>
+                    <h2 class="head__label">Centralized</h2>
+                    <div class="text">
+                        <p>Centralizing your application's state and logic enables powerful capabilities like <strong>undo/redo</strong>, <strong>state persistence</strong>, and much more.</p>                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="head">
+                        <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M304 280h56c4.4 0 8-3.6 8-8 0-28.3 5.9-53.2 17.1-73.5 10.6-19.4 26-34.8 45.4-45.4C450.9 142 475.7 136 504 136h16c28.3 0 53.2 5.9 73.5 17.1 19.4 10.6 34.8 26 45.4 45.4C650 218.9 656 243.7 656 272c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-40-8.8-76.7-25.9-108.1-17.2-31.5-42.5-56.8-74-74C596.7 72.8 560 64 520 64h-16c-40 0-76.7 8.8-108.1 25.9-31.5 17.2-56.8 42.5-74 74C304.8 195.3 296 232 296 272c0 4.4 3.6 8 8 8z"></path><path d="M940 512H792V412c76.8 0 139-62.2 139-139 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 34.8-28.2 63-63 63H232c-34.8 0-63-28.2-63-63 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 76.8 62.2 139 139 139v100H84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h148v96c0 6.5.2 13 .7 19.3C164.1 728.6 116 796.7 116 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-44.2 23.9-82.9 59.6-103.7 6 17.2 13.6 33.6 22.7 49 24.3 41.5 59 76.2 100.5 100.5S460.5 960 512 960s99.8-13.9 141.3-38.2c41.5-24.3 76.2-59 100.5-100.5 9.1-15.5 16.7-31.9 22.7-49C812.1 793.1 836 831.8 836 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-79.3-48.1-147.4-116.7-176.7.4-6.4.7-12.8.7-19.3v-96h148c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM716 680c0 36.8-9.7 72-27.8 102.9-17.7 30.3-43 55.6-73.3 73.3C584 874.3 548.8 884 512 884s-72-9.7-102.9-27.8c-30.3-17.7-55.6-43-73.3-73.3C317.7 752 308 716.8 308 680V412h408v268z"></path></svg>                    </div>
+                    <h2 class="head__label">Debuggable</h2>
+                    <div class="text">
+                        <p>The Redux DevTools make it easy to trace <strong>when, where, why, and how your application's state changed</strong>. Redux's architecture lets you log changes, use <strong>"time-travel debugging"</strong>, and even send complete error reports to a server</p>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="head">
+                        <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 2c-2.71 0-5.05 1.54-6.22 3.78a7.062 7.062 0 0 0-3 3A7.014 7.014 0 0 0 2 15c0 3.87 3.13 7 7 7 2.71 0 5.05-1.54 6.22-3.78a7.062 7.062 0 0 0 3-3A7.014 7.014 0 0 0 22 9c0-3.87-3.13-7-7-7zM9 20a5.002 5.002 0 0 1-4-8c0 3.87 3.13 7 7 7-.84.63-1.88 1-3 1zm3-3a5.002 5.002 0 0 1-4-8c0 3.86 3.13 6.99 7 7-.84.63-1.88 1-3 1zm4.7-3.3c-.53.19-1.1.3-1.7.3-2.76 0-5-2.24-5-5 0-.6.11-1.17.3-1.7.53-.19 1.1-.3 1.7-.3 2.76 0 5 2.24 5 5 0 .6-.11 1.17-.3 1.7zM19 12c0-3.86-3.13-6.99-7-7a5.002 5.002 0 0 1 7 7z"></path></svg>
+                        <h2 class="head__label">Flexible</h2>
+                    <div class="text">
+                        <p>Redux <strong>works with any UI layer</strong>, and has a <strong>large ecosystem of addons</strong> to fit your needs</p>
+                    </div>
+
+                </div>
+
+        </div>
+    </section>
 </body>
 </html>
