@@ -22,6 +22,10 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: #0b041a;
     font-family: var(--poppins);
@@ -58,7 +62,7 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: fixed;
     top: 0;
     left: 0;
@@ -319,16 +323,41 @@ body {
     display: block;
 }
 
+.mouse-scroll {
+    position: relative;
+    display: block;
+    margin-top: 5rem;
+    width: 1rem;
+    padding-top: 30px;
+    border: 1px solid var(--stroke);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mouse {
+    width: 4px;
+    height: 8px;
+    background: var(--stroke);
+    border-radius: 20px;
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    animation: 2s scroll-down linear infinite;
+}
+@keyframes scroll-down {
+    to{
+        transform: translateY(18px);
+        opacity: 0;
+    }
+}
+
 .features {
     margin: auto;
     margin-inline: auto;
     width: 100vw;
-    overflow: hidden;
     background: radial-gradient(  #29164e 10%,  #0b041a);
     padding: 1rem 2rem;
 }
-
-
 
 .row {
     margin: 1rem 0;
@@ -337,19 +366,22 @@ body {
     align-items: flex-start;
     gap: 1rem;
 }
+
 .col {
-    flex-grow: 1 0; 
+    flex: 1 1 1; 
     width: 100%;
-    background: #000000;
+    height: 100%;
+    background: linear-gradient(to bottom,  #000000, #1b0d36);
     max-width: 350px;
-    padding: 1rem 2rem;
-    border-radius: 10px;
+    padding: 2rem 2rem;
+    border-radius: 20px;
     border: 1px solid  #221341;
 }
 
 .head {
     text-align: center;
     padding: 1rem;
+    border-radius: 20px;
 }
 
 .head__label {
@@ -383,7 +415,7 @@ strong {
     display: none;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 1.6rem;
     z-index: 992;
 }
 
@@ -398,6 +430,9 @@ strong {
     cursor: pointer;
     transition: .5s all;
     padding: 1rem;
+    background: #160049;
+    border-radius: 30px;
+    border: 1px solid #5200FF;
 }
 
 .btn-dot:focus + .menu-hover {
@@ -414,7 +449,7 @@ strong {
 .menu-hover {
     visibility: hidden;
     background: var(--stroke);
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     position: absolute;
     bottom: -12rem;
     right: 5%;
@@ -436,13 +471,19 @@ strong {
 }
 
 .menu-hover .span {
+    margin-top: .5rem;
     color: white;
     font-family: var(--poppins);
-    font-size: 1.2rem;
-    padding: 5px 10px;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    text-decoration:wavy;
     border-radius: 10px;
     font-weight: 600;
     display: inline-block;
+}
+
+.menu-hover .span:hover {
+    background: black;
 }
 
 .get-started {
@@ -453,21 +494,21 @@ strong {
 
 .get-started a {
     display: inline-flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--poppins);
-    background: black;
+    background: #221341;
     outline: 0;
     border: 0;
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 10px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .menu-hover .get-started a:hover {
-    background: #160049;
+    background: black;
 }
 
 @media (max-width: 1100px) {
@@ -500,6 +541,11 @@ strong {
     .logo-container a span {
         display: none;
     }
+
+    .dots {
+        transform: translateY(1rem);
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -526,16 +572,24 @@ strong {
 
     .input {
         margin-right: 7rem;
+        transform: translateX(-1.8rem);
         min-width: 50px;
+    }
+
+    ::placeholder {
+        transform: translateX(-1rem);
+    }
+
+    .search-icon {
+        display: none;
     }
 
     .dots {
         display: block;
+        margin-right: 1rem;
+        transform: translateY(-0.8rem);
     }
 
-    .dots {
-        margin-right: 1rem;
-    }
 
     .hero {
         height: 250px;

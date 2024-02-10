@@ -13,6 +13,7 @@
             <source src="/assets/bg-video.mp4" type="video/mp4">
         </video>
         <nav class="nav">
+            <div class="drop-space"></div>
             <div class="logo-container">
                 <a href="#home">
                     <div class="logo-redux">
@@ -47,24 +48,24 @@
                     <a href="https://redux.js.org/introduction/getting-started">Get Started</a>
                 </button>
             </div>
-        </nav>
-        <div class="mobile-right-nav">
-            <div class="dots">
-                <button class="btn-dot">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="menu-hover">
-                    <a href="#">
-                        <span class="span">Github</span>
-                    </a>
-                    <button class="get-started">
-                        <a href="#">Get Started</a>
+            <div class="mobile-right-nav">
+                <div class="dots">
+                    <button class="btn-dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
+                    <div class="menu-hover">
+                        <a href="#">
+                            <span class="span">Github</span>
+                        </a>
+                        <button class="get-started">
+                            <a href="#">Get Started</a>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="content">
             <div class="hero">
                 <svg class="hero" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -107,6 +108,9 @@
                     </div>
                 </code>
             </div>
+            <div class="mouse-scroll">
+                <div class="mouse"></div>
+            </div>
         </div>
     </div>
     <section class="features">
@@ -140,7 +144,6 @@
                         <p>Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.</p>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="head">
                         <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"></path></svg>
@@ -149,7 +152,6 @@
                     <div class="text">
                         <p>Centralizing your application's state and logic enables powerful capabilities like <strong>undo/redo</strong>, <strong>state persistence</strong>, and much more.</p>                    </div>
                 </div>
-
                 <div class="col">
                     <div class="head">
                         <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M304 280h56c4.4 0 8-3.6 8-8 0-28.3 5.9-53.2 17.1-73.5 10.6-19.4 26-34.8 45.4-45.4C450.9 142 475.7 136 504 136h16c28.3 0 53.2 5.9 73.5 17.1 19.4 10.6 34.8 26 45.4 45.4C650 218.9 656 243.7 656 272c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-40-8.8-76.7-25.9-108.1-17.2-31.5-42.5-56.8-74-74C596.7 72.8 560 64 520 64h-16c-40 0-76.7 8.8-108.1 25.9-31.5 17.2-56.8 42.5-74 74C304.8 195.3 296 232 296 272c0 4.4 3.6 8 8 8z"></path><path d="M940 512H792V412c76.8 0 139-62.2 139-139 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 34.8-28.2 63-63 63H232c-34.8 0-63-28.2-63-63 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 76.8 62.2 139 139 139v100H84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h148v96c0 6.5.2 13 .7 19.3C164.1 728.6 116 796.7 116 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-44.2 23.9-82.9 59.6-103.7 6 17.2 13.6 33.6 22.7 49 24.3 41.5 59 76.2 100.5 100.5S460.5 960 512 960s99.8-13.9 141.3-38.2c41.5-24.3 76.2-59 100.5-100.5 9.1-15.5 16.7-31.9 22.7-49C812.1 793.1 836 831.8 836 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-79.3-48.1-147.4-116.7-176.7.4-6.4.7-12.8.7-19.3v-96h148c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM716 680c0 36.8-9.7 72-27.8 102.9-17.7 30.3-43 55.6-73.3 73.3C584 874.3 548.8 884 512 884s-72-9.7-102.9-27.8c-30.3-17.7-55.6-43-73.3-73.3C317.7 752 308 716.8 308 680V412h408v268z"></path></svg>                    </div>
@@ -157,13 +159,12 @@
                     <div class="text">
                         <p>The Redux DevTools make it easy to trace <strong>when, where, why, and how your application's state changed</strong>. Redux's architecture lets you log changes, use <strong>"time-travel debugging"</strong>, and even send complete error reports to a server</p>
                     </div>
-
                 </div>
-
                 <div class="col">
                     <div class="head">
                         <svg class="card-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 2c-2.71 0-5.05 1.54-6.22 3.78a7.062 7.062 0 0 0-3 3A7.014 7.014 0 0 0 2 15c0 3.87 3.13 7 7 7 2.71 0 5.05-1.54 6.22-3.78a7.062 7.062 0 0 0 3-3A7.014 7.014 0 0 0 22 9c0-3.87-3.13-7-7-7zM9 20a5.002 5.002 0 0 1-4-8c0 3.87 3.13 7 7 7-.84.63-1.88 1-3 1zm3-3a5.002 5.002 0 0 1-4-8c0 3.86 3.13 6.99 7 7-.84.63-1.88 1-3 1zm4.7-3.3c-.53.19-1.1.3-1.7.3-2.76 0-5-2.24-5-5 0-.6.11-1.17.3-1.7.53-.19 1.1-.3 1.7-.3 2.76 0 5 2.24 5 5 0 .6-.11 1.17-.3 1.7zM19 12c0-3.86-3.13-6.99-7-7a5.002 5.002 0 0 1 7 7z"></path></svg>
-                        <h2 class="head__label">Flexible</h2>
+                    </div>
+                    <h2 class="head__label">Flexible</h2>
                     <div class="text">
                         <p>Redux <strong>works with any UI layer</strong>, and has a <strong>large ecosystem of addons</strong> to fit your needs</p>
                     </div>
@@ -173,7 +174,44 @@
         </div>
     </section>
     <footer>
-        
+        <div class="footer-content">
+            <div class="col__footer">
+                <div class="label__footer">Docs</div>
+                <ul>
+                    <li>Getting Started</li>
+                    <li>Usage Guide</li>
+                    <li>Tutorial</li>
+                    <li>FAQ</li>
+                    <li>API Reference</li>
+                </ul>
+            </div>
+            <div class="col__footer">
+                <div class="label__footer">Community</div>
+                <ul>
+                    <li>
+                        <span>Reactiflux Discord</span>
+                        <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+                    </li>
+                    <li>
+                        <span>Stack Overflow</span>
+                        <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+                    </li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div class="col__footer">
+                <div class="label__footer">More</div>
+                <ul>
+                    <li>
+                        <span>Github</span>
+                        <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+                    </li>
+                    <li>
+                        <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deployed by Netlify">
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
