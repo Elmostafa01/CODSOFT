@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    background: hsl(224, 31.3%, 81.2%);
+    overflow: hidden;
+}
+
+.bg-asset {
+    background: url('/05.png');
+    background-position: center;
+    mix-blend-mode: multiply;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.calculator {
+    border-radius: 40px;
+    background: linear-gradient(to bottom, #2d384ec7 10%, #221f2efb 90%);
+    padding: 3rem 1rem;
+    box-shadow: 30px 30px 50px 5px hsla(240, 11%, 2%, 0.37);
+    backdrop-filter: blur(15px);
+}
+
+.display {
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 10px;
+    overflow: auto; 
+    font-weight: 600;
+    color: #88a5cf;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 7px;
+}
+
+.active {
+    position: relative;
+    height: 65px;
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 30;
+    background: linear-gradient(120deg ,#ff9900, #f83700);
+    box-shadow: 0 2px 10px #f83a00b6;
+}
+
+.active::after {
+    content: '';
+    background: linear-gradient(180deg,#f83700, #ff7c00);
+    position: absolute;
+    top: 4.5%;
+    left: 4.5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.numbers {
+    position: relative;
+    height: 65px;
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 50;
+    background: linear-gradient(10deg ,#293042, #656a81);
+    box-shadow: 0 2px 10px #161a2475;
+}
+
+.numbers::before {
+    content: '';
+    position: absolute;
+    top: 4.5%;
+    left: 4.5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: -1;
+    background: linear-gradient(90deg ,#293042, #4b5770);
+}
+
+.passive {
+    position: relative;
+    height: 65px;
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(10deg ,#8e9cc0, #656a81);
+    box-shadow: 0 2px 10px #161a2475;
+    z-index: 40;
+}
+
+.passive::after {
+    content: '';
+    position: absolute;
+    top: 4.5%;
+    left: 4.5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: -1;
+    background: linear-gradient(90deg ,#8e9cc0, #656a81);
+}
+
+button:hover {
+    filter: brightness(130%);
+}
+
+button:active {
+    transform: scale(0.95);
+    filter: brightness(80%);
+}
